@@ -1,26 +1,27 @@
-
 /*************************************************** One_Liner ***************************************************/
 #tabbrowser-tabs { visibility: collapse !important; }
 
-#nav-bar {
-margin-top: -30px;
-margin-right: 35vw;
+/* #nav-bar {
+/* margin-top: -30px; */
+/* margin-top: 2px; */
+/* margin-right: 35vw; */
+/* margin-bottom: 0px; */
 margin-bottom: 0px;
-margin-left: 0px;}
+/* margin-left: 0px;} */
 
 /* if the screen is smaller than 1300px right margin is 30% */
-@media screen and (max-width: 1700px){
-  #urlbar-container{ min-width:unset !important }
-  #navigator-toolbox > #nav-bar{ margin-right:30vw !important}
-}
+/* @media screen and (max-width: 1700px){
+  #urlbar-container{ min-width:unset !important }
+  #navigator-toolbox > #nav-bar{ margin-right:30vw !important}
+} */
 
 /* if the screen is smaller than 950px right margin is 20% */
-@media screen and (max-width: 950px){
-  #urlbar-container{ min-width:unset !important }
-  #navigator-toolbox > #nav-bar{ margin-right:20vw !important}
-}
+/* @media screen and (max-width: 950px){
+  #urlbar-container{ min-width:unset !important }
+  #navigator-toolbox > #nav-bar{ margin-right:20vw !important}
+} */
 /*************************************************** SIDEBERY ***************************************************/
-#sidebar-box {  min-width: 1px !important;}
+#sidebar-box {  min-width: 1px !important;}
 
 #sidebar-header{ display: none }
 
@@ -28,11 +29,11 @@ margin-left: 0px;}
 tooltip{-moz-appearance: none !important; background:#232323 !important; color: #ededed}
 
 /******************************************* Remove_Search_with_Google ***********************************************/
-#urlbar[usertyping] .urlbarView-row:not([type]):first-child,
+/* #urlbar[usertyping] .urlbarView-row:not([type]):first-child,
 #urlbar[usertyping] .urlbarView-row[type="search"]:first-child,
 .urlbarView-row[type="tabtosearch"] {
-  display: none !important;
-}
+  display: none !important;
+} */
 
 /******************************************* Remove_Padding_and_button_fix *************************************************/
 #urlbar-container{ padding-block: 0px !important }
@@ -40,24 +41,67 @@ tooltip{-moz-appearance: none !important; background:#232323 !important; color: 
 
 /*************************************** Remove 1 pixel sized black line *********************************************/
 #navigator-toolbox {
-  border-bottom: none !important;
+  border-bottom: none !important;
 }
-
+  
 /*************************************** Remove Right Click Menu Top Settings ****************************************/
-#context-navigation,#context-sep-navigation{ display: none !important }
+/* #context-navigation,#context-sep-navigation{ display: none !important } */
 
 /*************************************** Shrink toolbar by 1 pixel *********************************************/
 #navigator-toolbox{
-  --toolbarbutton-inner-padding: 5px;
+  --toolbarbutton-inner-padding: 6px;
 }
 #urlbar-container{
-  --urlbar-container-height: 25px !important;
-  padding-block: 1px !important;
+  --urlbar-container-height: 25px !important;
+  padding-block: 1px !important;
 }
 toolbarbutton.bookmark-item:not(.subviewbutton){
-  margin: 0px !important;
-  padding-block: 0 !important;
+  margin: 0px !important;
+  padding-block: 0 !important;
 }
 
 /*************************************** Remove Bookmarks Star *******************************************************/
-#star-button-box {display: none !important;}
+/* #star-button-box {display: none !important;} */
+
+/*************************************** END *******************************************************/
+
+
+#urlbar-background {
+  #urlbar-background, #searchbar {
+  /* background-color: var(--toolbar-field-background-color); */
+  /* background-clip: border-box; */
+  /* border: 1px solid var(--toolbar-field-border-color); */
+  /* border-radius: 0px !important; */
+}}
+
+#urlbar-background {
+  /* background-color: var(--toolbar-field-background-color); */
+  /* background-clip: border-box; */
+  /* border: 1px solid var(--toolbar-field-border-color); */
+  border-radius: 0px !important;
+}
+
+#sidebar-box {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  padding-bottom: 0px !important;
+  padding-top: 2px !important;
+}
+
+#sidebar {
+  border-radius: 0px !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* .tools-and-extensions {
+  --button-outer-padding-inline: 0px !important;
+  --button-outer-padding-block: 0px !important;
+} */
+
+.actions-list {
+  & > moz-button:not(.tools-overflow) {
+    --button-outer-padding-inline: 0px !important;
+    --button-outer-padding-block: 0px !important;
+  }
+}
